@@ -35,7 +35,7 @@ function handleOnClick(cellIndex) {
             displayRounds();
             checkWinner();
             maxDraws();
-            resetGame();
+            resetRound();
             round++;
         } else if (board.every(cell => cell !== '')) { // ELSE IF EVERY CELL IS OCCUPIED 
             document.querySelector(".nowinners").innerText = "There are no winners";
@@ -44,7 +44,7 @@ function handleOnClick(cellIndex) {
             }, 1000);
             maxDraws();
             displayRounds();
-            resetGame();
+            resetRound();
             draw++;
             round++;
         } else {
@@ -92,7 +92,7 @@ function maxDraws() {
 }
 
 // Function to reset the game
-function resetGame() {
+function resetRound() {
     board.fill(''); // FILLS board ARRAY WITH EMPTY STRINGS
     document.querySelectorAll('.cell').forEach(cell => cell.innerText = ''); // SELECTS ALL cells AND PUTS AN EMPTY STRING IN EACH OF THEM
     currentPlayer = 'X';
@@ -105,7 +105,6 @@ function endGame() {
     playerXWins = 0;
     playerOWins = 0;
     document.querySelector(".endround").innerText = "";
-
 }
 
 //DISPLAYS WHOSE TURN IT IS
