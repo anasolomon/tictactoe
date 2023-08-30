@@ -30,23 +30,24 @@ function handleOnClick(cellIndex) {
 
 
         if (checkWin()) { // checkWin RETURNS TRUE IF CONDITION IS MET
-            document.querySelector(".endround").innerText = `${player} has won round ${round - 1}!`;
+            document.querySelector(".endround").innerText = `${player} has won round ${round}!`;
+            console.log("inside", round);
             currentPlayer === 'X' ? playerXWins++ : playerOWins++; // IF CURRENT PLAYER IS X THEN INCREMENT playerXWins ELSE INCREMENT playerOWins
-            displayRounds();
             checkWinner();
             maxDraws();
             resetRound();
             round++;
+            displayRounds();
         } else if (board.every(cell => cell !== '')) { // ELSE IF EVERY CELL IS OCCUPIED 
             document.querySelector(".nowinners").innerText = "There are no winners";
             setTimeout(() => {
                 document.querySelector(".nowinners").innerText = ""; // RESET THE ERROR AFTER 1 SECOND
             }, 1000);
             maxDraws();
-            displayRounds();
             resetRound();
             draw++;
             round++;
+            displayRounds();
         } else {
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X'; // IF CURRENT PLAYER IS EQUAL TO X THEN SWITCH TO OPPOSITE 
             player = player === player1 ? player2 : player1;
