@@ -1,0 +1,116 @@
+body{
+    font-family: 'Bai Jamjuree', sans-serif;
+    background-color: rgb(245, 245, 245);
+}
+h1{
+    margin: auto 0;
+    text-align: center;
+}
+table{
+    border-collapse: collapse;
+    margin-top: 6%;
+    margin-left:auto; 
+    margin-right:auto;
+}
+td{
+    text-align: center;
+    border: 3px solid rgb(0, 0, 0);
+    height: 100px;
+    width: 100px;
+}
+#titolo{
+    font-size: 3rem;
+}
+.playerone, .playertwo{
+    cursor: pointer;
+}
+.scoreone, .scoretwo{
+    border: 1px solid rgb(0, 0, 0);
+}
+.neonText {
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #f09,
+      0 0 82px #f09,
+      0 0 92px #f09,
+      0 0 102px #f09,
+      0 0 151px #f09;
+      font-size: 4.2rem;
+      font-weight: 900;
+      cursor: crosshair;
+  }
+.round{
+    margin-top: 5px;
+    text-align: center;
+}
+.text-left{
+    width: 20%;
+    margin-left: 5%;
+}
+.text-right{
+    float: right;
+    width: 20%;
+}
+.big-text{
+    text-align: center;
+}
+.notop{
+    border-top: none;
+}
+.noleft{
+    border-left: none;
+}
+.noright{
+    border-right: none;
+}
+.nobot{
+    border-bottom: none;
+}
+.error, .nowinners,.turn{
+    color: red;
+    font-size: 150%;
+}
+.turn, .finegioco{
+    color: rgb(14, 139, 235);
+}
+.left{
+    width: 10%;
+    margin-top: 1%;
+    margin-left:auto; 
+    margin-right:auto;
+}
+.players-left{
+    border: 1px solid black;
+}
+.scores-left{
+    height: 30px;
+}
+.footer{
+    text-align: center;
+    margin-top: 10%;
+}
+/* .fade-in-text-sub {
+    opacity: 0;
+    animation: fadeIn linear 5s;
+    animation-fill-mode: both;
+    -webkit-animation: fadeIn linear 5s;
+  }
+  @keyframes fadeIn {
+    0% {opacity:1;}
+    100% {opacity:0;}
+  } */
+  
+/* #fade-out{
+animation: fadeOut 10s;
+}
+@keyframes fadeOut {
+0% {
+opacity: 1;
+}
+100% {
+opacity: 0;
+}
+} */

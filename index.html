@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="styles/imgs/main.png" />
+    <title>Tip Tap Toe</title>
+</head>
+
+<body>
+    <h1 id="titolo">Tip Tap Toe</h1>
+
+
+    <table class="left">
+        <tr>
+            <th class="players-left playerone" onclick="check1()">Player X</th>
+            <th class="players-left playertwo" onclick="check2()">Player O</th>
+        </tr>
+        <tr>
+            <td class="scores-left scoreone">0</td>
+            <td class="scores-left scoretwo">0</td>
+        </tr>
+    </table>
+
+    <h2 class="round"></h2>
+
+    <table id="board">
+        <tr>
+            <td class="cell notop noleft neonText" onclick="handleOnClick(0)"></td>
+            <td class="cell notop neonText" onclick="handleOnClick(1)"></td>
+            <td class="cell notop noright neonText" onclick="handleOnClick(2)"></td>
+        </tr>
+
+        <tr>
+            <td class="cell noleft neonText" onclick="handleOnClick(3)"></td>
+            <td class="cell neonText" onclick="handleOnClick(4)"></td>
+            <td class="cell noright neonText" onclick="handleOnClick(5)"></td>
+        </tr>
+
+        <tr>
+            <td class="cell noleft nobot neonText" onclick="handleOnClick(6)"></td>
+            <td class="cell nobot neonText" onclick="handleOnClick(7)"></td>
+            <td class="cell noright nobot neonText" onclick="handleOnClick(8)"></td>
+        </tr>
+    </table>
+
+    </div>
+
+    <div class="error text-right"></div>
+    <div class="nowinners text-right"></div>
+    <div class="turn text-left"></div>
+    <div class="endround text-left"></div>
+    <h1 class="big-text" onclick="reset_text()"></h1>
+    <div class="img"></div>
+
+    <div class="footer">Made with love by <a href="https://github.com/anasolomon/tiptaptoe" target="_blank">Ana-Maria Tanasciuc©</a> 2022</div>
+
+    <!-- <div class="fade-in-text-sub">aaaaaaaaaaaaaaaaa</div> -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
