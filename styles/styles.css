@@ -92,25 +92,3 @@ td{
     text-align: center;
     margin-top: 10%;
 }
-/* .fade-in-text-sub {
-    opacity: 0;
-    animation: fadeIn linear 5s;
-    animation-fill-mode: both;
-    -webkit-animation: fadeIn linear 5s;
-  }
-  @keyframes fadeIn {
-    0% {opacity:1;}
-    100% {opacity:0;}
-  } */
-  
-/* #fade-out{
-animation: fadeOut 10s;
-}
-@keyframes fadeOut {
-0% {
-opacity: 1;
-}
-100% {
-opacity: 0;
-}
-} */

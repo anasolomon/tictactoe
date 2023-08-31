@@ -8,17 +8,17 @@ let round = 1;
 let draw = 0;
 let player1 = "Player X";
 let player2 = "Player O";
-const winner_rounds = 3;
-const drawsAllowed = 5;
 let player = player1;
 let currentPlayer = 'X';
+const winner_rounds = 3;
+const drawsAllowed = 5;
 const board = ['', '', '', '', '', '', '', '', ''];
 
-let turn = document.querySelector(".turn");             //WILL USE TO DISPLAY TURNS
-
+let turn = document.querySelector(".turn"); // WILL USE TO DISPLAY TURNS
 
 displayRounds();
 currentTurnDisplay();
+
 // onclick FUNCTION WITH PARAMETER OF INDEX BETWEEN 0-8
 function handleOnClick(cellIndex) {
 
@@ -98,6 +98,7 @@ function resetRound() {
     document.querySelectorAll('.cell').forEach(cell => cell.innerText = ''); // SELECTS ALL cells AND PUTS AN EMPTY STRING IN EACH OF THEM
     currentPlayer = 'X';
     player = player1;
+    currentTurnDisplay();
 }
 
 function endGame() {
@@ -110,7 +111,7 @@ function endGame() {
 
 //DISPLAYS WHOSE TURN IT IS
 function currentTurnDisplay() {
-    turn.innerHTML = `It's ${player}'s turn (${currentPlayer})`;
+    turn.innerText = `It's ${player}'s turn (${currentPlayer})`;
 }
 
 function displayRounds() {
@@ -122,13 +123,13 @@ function displayRounds() {
 check1 = function () {
     player1 = prompt("Enter player one's name: ");
     if (player1 !== '') {
-        document.querySelector(".playerone").innerHTML = `${player1} (X)`;
+        document.querySelector(".playerone").innerText = `${player1} (X)`;
     }
 }
 check2 = function () {
     player2 = prompt("Enter player two's name: ");
     if (player2 !== '') {
-        document.querySelector(".playertwo").innerHTML = `${player2} (O)`;
+        document.querySelector(".playertwo").innerText = `${player2} (O)`;
     }
 }
 
