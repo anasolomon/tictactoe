@@ -13,9 +13,10 @@ let currentPlayer = 'X';
 const winner_rounds = 3;
 const drawsAllowed = 5;
 const board = ['', '', '', '', '', '', '', '', ''];
+const currentYear = new Date().getFullYear();
 
+document.querySelector(".year").innerText = currentYear; // DISPLAYS CURRENT YEAR DYNAMICALLY
 let turn = document.querySelector(".turn"); // WILL USE TO DISPLAY TURNS
-
 displayRounds();
 currentTurnDisplay();
 
@@ -31,7 +32,6 @@ function handleOnClick(cellIndex) {
 
         if (checkWin()) { // checkWin RETURNS TRUE IF CONDITION IS MET
             document.querySelector(".endround").innerText = `${player} has won round ${round}!`;
-            console.log("inside", round);
             currentPlayer === 'X' ? playerXWins++ : playerOWins++; // IF CURRENT PLAYER IS X THEN INCREMENT playerXWins ELSE INCREMENT playerOWins
             checkWinner();
             maxDraws();
